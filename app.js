@@ -4,10 +4,10 @@ var app = express();
 app.set('views', './public/views');
 app.set('view engine', 'pug');
 
-app.use(express.static('public'));
+app.use(express.static('public/views'));
 
 app.get('/', function(req, res) {
-  res.render('index', {title: 'Hey', message: 'Hello there' });
+  res.send('index');
 });
 
 app.route('/test')
